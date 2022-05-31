@@ -1,0 +1,36 @@
+
+.template-policy{
+    // 增加权重
+    .shopify-policy__container{
+        @extend .container;
+        @extend .py-5;
+        @extend .py-md-9;
+        .shopify-policy__title h1{
+            @extend .h2;
+            @extend .mb-0;
+        }
+        
+        .shopify-policy__body, .shopify-policy__title{
+            @extend .col-xl-8;
+            @extend .col-lg-10;
+            @extend .col-12;
+            @extend .mx-auto;
+        }
+        p, h2, h3, h4, h5, h6{
+            @extend .mb-4;
+        }
+        figure,img {
+            height: auto;
+            vertical-align: middle
+        }
+        
+        figure,img,svg {
+            max-width: 100%
+        }
+        
+        iframe {
+            width: 100%;
+            border: 0
+        }
+    }
+}

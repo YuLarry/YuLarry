@@ -1,0 +1,53 @@
+---
+pagination:
+  data: sites
+  size: 1
+  alias: site
+title: Forgot password
+# page 是关键字，不能用
+permalink: "{{ site._meta.lang | slug }}/forgot-password/"
+scripts: '/forgot-pwd/index.js'
+---
+
+<main>
+  <section class="container py-9">
+    <div class="container-form">
+      <div class="as-forgot-password">
+        <h2 class="fs-3 text-center mb-0">{{ t.customer.login.forgot_password }}</h2>
+        <div class="text-center mt-3">
+          <p class="mb-0">{{ t.customer.reset_password.subtext }}</p>
+        </div>
+        <form action="{{ settings.api_host }}/auth/pwd/forget" method="post" class="as-forgot-pwd-form mt-6" novalidate autocomplete="off">
+          <div class="form-floating form-pristine">
+            <input type="text" name="email" class="as-user-email form-control input-pristine" id="email" placeholder="{{ t.customer.reset_password.email }}" required
+            data-pristine-required-message="{{ t.customer.error.empty_error | replace: "label", t.customer.reset_password.email | downcase | capitalize }}.">
+            <label for="email">{{ t.customer.reset_password.email }}</label>
+            <!-- <div class="as-field-error as-error-tips text-danger d-none small mt-2">Please enter a valid email address</div> -->
+          </div>
+          <input type="hidden" name="source" class="as-source-param">
+          <input type="hidden" name="callback" class="as-callback-param">
+          <input type="hidden" name="return_to" class="as-return-to-param">
+          <input type="hidden" name="store" class="as-store-param">
+          <input type="hidden" name="lang" value="{{ site._meta.lang | slug }}">
+          <div class="as-form-error text-danger d-none small mt-2"></div>
+          <div class="as-not-exist-error d-none">{{ t.customer.error.account_not_exist_error }}</div>
+          <div class="as-invalid-error d-none">{{ t.customer.error.other_error }}</div>
+          <button type="submit" class="as-submit btn btn-primary w-100 mt-3">{{ t.customer.reset_password.submit }}</button>
+        </form>
+        <div class="mt-4 text-center">
+            <a class="btn-link as-update-link" data-link="{{ site._meta.lang | slug }}/login/" href="/{{ site._meta.lang | slug }}/login/">{{ t.customer.reset_password.log_in_html }}</a>
+        </div>
+      </div>
+
+      <div class="as-success-page d-none">
+        <h2 class="fs-3 text-center mb-0">{{ t.customer.reset_password_submitted.title }}</h2> 
+        <div class="text-center mt-3">
+          <p>{{ t.customer.reset_password_submitted.subtext }}</p>
+          <p class="as-render-email mb-0"></p>
+        </div>
+        <a href="/{{ site._meta.lang | slug }}/login/" data-link="{{ site._meta.lang | slug }}/login/" class="btn btn-primary w-100 mt-5 as-update-link">{{ t.customer.reset_password_submitted.back }}</a>
+        
+      </div>
+    </div>
+  </section>
+</main>

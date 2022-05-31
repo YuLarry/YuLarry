@@ -1,0 +1,43 @@
+@mixin responsive-attributes($attribute, $values: $container-max-widths, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      #{$attribute}: map-get($values, $breakpoint);
+    }
+  }
+}
+
+@mixin make-responsive-rigid-image-wrapper($breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $prefix: breakpoint-prefix($breakpoint, $breakpoints);
+  
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      
+      .#{$prefix}rigid-wrapper {
+        overflow: hidden;
+        &>img,
+        &>picture>img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+  
+    }
+  }
+}
+
+// @mixin make-responsive-embed-placeholder {
+//   @each $breakpoint in map-keys($grid-breakpoints) {
+//     @include media-breakpoint-up($breakpoint) {
+//       $prefix: breakpoint-prefix($breakpoint, $grid-breakpoints);
+  
+//       @each $key, $ratio in $embed-responsive-aspect-ratios {
+//         .#{$prefix}embed-responsive-#{$key} {
+//           &::before {
+//             padding-top: percentage(map-get($ratio, y) / map-get($ratio, x));
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

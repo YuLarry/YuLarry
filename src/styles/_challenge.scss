@@ -1,0 +1,15 @@
+
+.shopify-challenge__container{
+    @extend .container;
+    @extend .py-5;
+    @extend .py-md-9;
+  }
+  .shopify-challenge__button{
+    @extend .btn-primary;
+  }
+
+  .shopify-challenge__message{
+  }
+
+
+

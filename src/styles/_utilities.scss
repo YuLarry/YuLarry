@@ -1,0 +1,22 @@
+$height-increment: 5rem;
+$utilities: (
+  "rigig-wrapper-height": (
+    responsive: true,
+    property: height,
+    class: h,
+    values: (	
+      1: $height-increment,
+      2: $height-increment * 2,
+      3: $height-increment *3,
+      4: $height-increment * 4,
+      5: $height-increment * 5,
+      6: 31.25rem, // 500
+      7: 33.75rem, //540
+      8: $height-increment * 8, // 640
+      9: $height-increment * 9, //720
+      10: $height-increment * 10, // 800
+      11: $height-increment * 11, //880,
+      12: $height-increment * 12 //960
+    )
+  )
+);

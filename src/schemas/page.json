@@ -1,0 +1,197 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Title",
+        "placeholder" : "Title of the page"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "image_with_text" : [ ]
+        },
+        "choices" : {
+          "banner_with_background" : {
+            "type" : "Slice",
+            "fieldset" : "Banner with Background",
+            "description" : "Banner with caption and button",
+            "icon" : "chrome_reader_mode",
+            "non-repeat" : {
+              "image_banner" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 750,
+                    "height" : 1000
+                  },
+                  "thumbnails" : [ {
+                    "name" : "desktop",
+                    "width" : 1920,
+                    "height" : 1200
+                  } ],
+                  "label" : "Image Banner"
+                }
+              },
+              "title_of_banner" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "heading2",
+                  "label" : "Title Of banner",
+                  "placeholder" : "My title of banner"
+                }
+              },
+              "description" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "Description",
+                  "placeholder" : "My description"
+                }
+              },
+              "button_label" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label" : "Button label",
+                  "placeholder" : "Click Here"
+                }
+              },
+              "button_link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Button Link",
+                  "placeholder" : "Select the link"
+                }
+              }
+            },
+            "repeat" : { },
+            "display" : "grid"
+          },
+          "stacked_image_text" : {
+            "type" : "Slice",
+            "fieldset" : "Stacked Image Text",
+            "description" : "Image stacked on Text",
+            "icon" : "image",
+            "display" : "list",
+            "non-repeat" : {
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Heading",
+                  "placeholder" : "Headline"
+                }
+              },
+              "lead_graph" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph, strong, hyperlink",
+                  "allowTargetBlank" : true,
+                  "label" : "Lead Paragraph",
+                  "placeholder" : "Something short and leading about the feature or topic. Use bold text to make words, setences stand out."
+                }
+              },
+              "primary_link_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading6",
+                  "label" : "Primary Link Text",
+                  "placeholder" : "Label of the primary link"
+                }
+              },
+              "primary_link" : {
+                "type" : "Link",
+                "config" : {
+                  "allowTargetBlank" : true,
+                  "label" : "Primary Link",
+                  "placeholder" : "Paste a link"
+                }
+              },
+              "secondary_link_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading6",
+                  "label" : "Secondary Link Text",
+                  "placeholder" : "Label of the secondary link"
+                }
+              },
+              "secondary_link" : {
+                "type" : "Link",
+                "config" : {
+                  "allowTargetBlank" : true,
+                  "label" : "Secondary Link",
+                  "placeholder" : "Paste a link"
+                }
+              },
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 1320,
+                    "height" : 540
+                  },
+                  "thumbnails" : [ {
+                    "name" : "mobile",
+                    "width" : 720,
+                    "height" : 480
+                  } ],
+                  "label" : "Image"
+                }
+              },
+              "background_color" : {
+                "type" : "Select",
+                "config" : {
+                  "options" : [ "Transparent", "White", "Light", "Dark", "Black" ],
+                  "default_value" : "Transparent",
+                  "label" : "Background Color"
+                }
+              }
+            },
+            "repeat" : { }
+          }
+        }
+      }
+    }
+  },
+  "SEO" : {
+    "page_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Page Title"
+      }
+    },
+    "page_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Page Description"
+      }
+    },
+    "page_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 1200,
+          "height" : 628
+        },
+        "thumbnails" : [ ],
+        "label" : "Open Graph Image"
+      }
+    }
+  },
+  "Meta Data" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "Handle",
+        "placeholder" : "Last part of the URL"
+      }
+    }
+  }
+}

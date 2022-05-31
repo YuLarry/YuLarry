@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js __prototype" lang="{{locale.lang}}">
+
+  <head>
+    <meta charset="utf-8">
+    <title>{{settings.brand_name}} - {{title}}</title>
+    <meta name="description" content="{{description}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{#settings.theme.color}}
+    <meta name="theme-color" content="{{.}}">
+    {{/settings.theme.color}}
+
+    <link rel="apple-touch-icon" href="{{appleTouchIcon}}">
+    {{#settings.favicon}}
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" href="{{.}}"/>
+    {{/settings.favicon}}
+    
+    {{#settings.theme.googlefont}}
+    <link href="{{.}}" rel="stylesheet">
+    {{/settings.theme.googlefont}}
+    <!-- 没有谷歌字体，在这儿插入代码 -->
+    <!-- <link rel="preload" as="font" href="/assets/fonts/Metropolis-Light.otf" type="font/otf" crossorigin="anonymous"> -->
+
+    {{#stylesheets}}
+    <link rel="stylesheet" href="{{ asset_url .}}">
+    {{/stylesheets}}
+    {{^stylesheets}}
+    <link rel="stylesheet" href="{{ asset_url 'index.css' }}">
+    {{/stylesheets}}
+    <script src="{{ asset_url '/scripts/vendor/lazysizes.js'}}" async></script>
+    {{#scripts}}
+      <script src="{{ asset_url .}}" defer="defer"></script>
+    {{/scripts}}
+    
+  </head>
+
+  <body class="{{#invisible}}invisible{{/invisible}}">
+    {{assign 'locale' locale.lang}}
+    {{> 'sections/headers/header' }}
+    {{{ content }}}
+    {{> 'sections/footers/footer' }}
+  </body>
+
+</html>

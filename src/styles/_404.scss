@@ -1,0 +1,8 @@
+.display-404{
+    color: #fff;
+    font-size: 10rem;
+    text-shadow: -0.0625rem 0 $primary, 0 0.0625rem $primary, 0.0625rem 0 $primary, 0 -0.0625rem $primary;
+    @include media-breakpoint-down(md) {
+        font-size: 8rem;
+    }
+}

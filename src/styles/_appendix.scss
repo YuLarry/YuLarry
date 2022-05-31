@@ -1,0 +1,234 @@
+@import "./functions";
+@import "./mixins";
+@import "./buttons";
+
+$text-wrap-max-width: 45rem !default;
+
+.bg-surface {
+  background-color: rgba(86, 61, 124, .15);
+}
+
+// 用于容纳文本的容器
+.text-wrap {
+  @include make-container;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: $text-wrap-max-width;
+}
+
+.container-topic {
+  @include make-container;
+  max-width: add(1920px, $grid-gutter-width * 2);
+}
+
+// section 内边距的选定是跟标题字号的大小相关的, 标题字号越大, 内边距也越大
+// .section-content {
+//   &.pad-top {
+//     @include responsive-attributes(padding-top, (xs: map-get($spacers, 6), sm: map-get($spacers, 7), md: map-get($spacers, 8)));
+//   }
+//   &.pad-bottom {
+//     @include responsive-attributes(padding-bottom, (xs: map-get($spacers, 6), sm: map-get($spacers, 7), md: map-get($spacers, 8)));
+//   }
+// }
+
+.section-figure {
+  margin: 0;
+}
+
+.figure-holder {
+  display: block;
+  .absolute-figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.section-caption,
+.section-overline {
+  // font-size: $font-size-base * .875;
+}
+
+// utilities
+// 垂直水平居中
+.absolute-center,
+.pin-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+}
+
+.pin-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+.navbar-toggler-icon {
+  width: $font-size-base * $line-height-base;
+  height: $font-size-base * $line-height-base;
+}
+
+.navbar-toggler {
+  border: 0;
+}
+
+.mw-text {
+  max-width: $text-wrap-max-width;
+}
+
+.img-wrapper {
+  display: block;
+  &>img,
+  &>picture>img {
+    height: 100%;
+    width: 100%;
+  }
+  &.rigid-wrapper {
+    overflow: hidden;
+  }
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.modal-header {
+  &.modal-header-overlay {
+    position: absolute;
+    // width: 100%;
+    right: 0;
+    background-color: transparent;
+    z-index: 1;
+    border-bottom: 0;
+
+    & + .modal-body {
+      padding-top: map-get($spacers, 8 ) !important;
+    }
+  }
+}
+
+// @include make-responsive-rigid-image-wrapper;
+// @include make-responsive-embed-placeholder;
+
+// .input-group-action {
+//   @include button-outline-variant($input-border-color);
+//   &:hover {
+//     background-color: $primary;
+//     border-color: $primary;
+//     color: color-yiq($primary);
+//   }
+// }
+
+// 如果需要调整为左侧 x 的话，全局调整
+// .modal-header {
+//   .close.left-close {
+//     margin: (-$modal-header-padding-y) auto (-$modal-header-padding-x) (-$modal-header-padding-y);
+//   }
+// }
+
+// 处理如果 stretched link 和普通按钮在一起时热区的情况
+.stretched-link + .card-link,
+.stretched-link + .link,
+.with-stretched-link {
+  position: relative;
+  z-index: $stretched-link-z-index;
+}
+
+.dropdown-toggle {
+  &::after {
+    float: right;
+    margin-top: add($input-line-height * .5em, - $caret-width * .5);
+  }
+}
+
+
+@each $font-size in map-keys($display-font-sizes) {
+  // @include responsive-attributes(font-size);
+}
+
+.puppet-drive {
+  & + .fade {
+    display: none;
+    opacity: 0;
+  }
+
+  &:checked + .puppet-panel.fade {
+    display: block;
+    opacity: 1;
+  }
+}
+
+// 处理文案省略号
+.ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+// checkbox报错样式
+.was-validated .form-check-input:invalid,
+.form-check-input.is-invalid {
+  border-color: $body-color;
+}
+.was-validated .form-check-input:invalid ~ .form-check-label,
+.form-check-input.is-invalid ~ .form-check-label {
+  color: $body-color;
+}
+// label 样式
+.form-floating > label {
+  opacity: .65;
+}
+// 重新定义表单安全区域
+.container-form {
+  max-width: 22.5rem;
+  margin: auto;
+}
+
+.form-control.is-invalid,.was-validated .form-control:invalid {
+  background-image: none;
+}
+
+.site-footer {
+  min-height: 6rem;
+}
+main {
+  min-height: calc(100vh - 152px);
+}
+.btn {
+  text-transform: uppercase;
+}
+.visible-control {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  display: flex;
+  align-items: start;
+  height: 100%;
+  padding-top: 1rem;
+  cursor: pointer;
+  .icon-eye {
+    display: block;
+  }
+  .icon-eye-off {
+    display: none;
+  }
+  &.content-invisible {
+    .icon-eye {
+      display: none;
+    }
+    .icon-eye-off {
+      display: block;
+    }
+  }
+}

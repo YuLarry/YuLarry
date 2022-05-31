@@ -1,0 +1,56 @@
+[
+  {
+    "_meta": {
+      "lang": "en"
+    },
+    "lang": "en",
+    "root_url": "https://iprototype.myshopify.com",
+    "copyright": "© 2021 IPROTOTYPE copyright",
+    "privacy_policy_url": "https://iprototype.myshopify.com/polices/privacy-policy"
+  },
+  {
+    "_meta": {
+      "lang": "jp"
+    },
+    "lang": "jp",
+    "root_url": "https://iprototype.myshopify.com",
+    "copyright": "© 2021 IPROTOTYPE copyright",
+    "privacy_policy_url": "https://iprototype.myshopify.com/polices/privacy-policy"
+  },
+  {
+    "_meta": {
+      "lang": "fr"
+    },
+    "lang": "fr",
+    "root_url": "https://iprototype.myshopify.com",
+    "copyright": "© 2021 IPROTOTYPE copyright",
+    "privacy_policy_url": "https://iprototype.myshopify.com/polices/privacy-policy"
+  },
+  {
+    "_meta": {
+      "lang": "es"
+    },
+    "lang": "es",
+    "root_url": "https://iprototype.myshopify.com",
+    "copyright": "© 2021 IPROTOTYPE copyright",
+    "privacy_policy_url": "https://iprototype.myshopify.com/polices/privacy-policy"
+  },
+  {
+    "_meta": {
+      "lang": "it"
+    },
+    "lang": "it",
+    "root_url": "https://iprototype.myshopify.com",
+    "copyright": "© 2021 IPROTOTYPE copyright",
+    "privacy_policy_url": "https://iprototype.myshopify.com/polices/privacy-policy"
+  },
+  {
+    "_meta": {
+      "lang": "de"
+    },
+    "lang": "de",
+    "root_url": "https://iprototype.myshopify.com",
+    "copyright": "© 2021 IPROTOTYPE copyright",
+    "privacy_policy_url": "https://iprototype.myshopify.com/polices/privacy-policy"
+  }
+]

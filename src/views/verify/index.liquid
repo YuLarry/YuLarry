@@ -1,0 +1,46 @@
+---
+pagination:
+  data: sites
+  size: 1
+  alias: site
+title: Verify
+# page 是关键字，不能用
+permalink: "{{ site._meta.lang | slug }}/verify/"
+scripts: '/verify/index.js'
+---
+
+<main>
+  <section class="container py-9">
+    <div class="container-form">  
+      <div class="as-verify-section" data-next-page="{{ site._meta.lang | slug }}/set-password/" data-prev-page="{{ site._meta.lang | slug }}/register/">
+        <h2 class="fs-3 text-center mb-0">{{ t.customer.verify.title }}</h2>
+        <div class="text-center mt-3">
+          <p class="mb-0">{{ t.customer.verify.subtext }}&nbsp;<span class="as-render-email text-decoration-underline"></span><br><a href="#" class="as-change btn-link">{{ t.customer.verify.change }}</a></p>
+          <p class="mb-0">{{ t.customer.verify.activate_information }}</p>
+        </div>
+        <form action="{{ settings.api_host }}/auth/verification/email/verify" method="post" class="as-verification-form mt-6" novalidate autocomplete="off">
+          <div class="form-floating form-pristine">
+            <input type="text" name="verification_code" class="form-control input-pristine" id="verification-code" placeholder="{{ t.customer.verify.verification_code }}"
+              data-pristine-required-message="{{ t.customer.error.empty_error | replace: "label", t.customer.verify.verification_code | downcase | capitalize }}" required>
+            <label for="verification-code">{{ t.customer.verify.verification_code }}</label>
+          </div>
+          <input type="hidden" class="as-email-param" name="email">
+          <input type="hidden" name="lang" value="{{ site.lang | slug }}">
+          <div class="text-end mt-2">
+            <a href="#" class="as-send-again btn-link">{{ t.customer.verify.send_again }}</a>
+            <p class="as-countdown-wrap d-none mb-0">{{ t.customer.verify.count_down | replace: 'number', '<span class="as-countdown-number" data-interval="60">60</span>' }}</p>
+          </div>
+          <button type="submit" class="as-submit btn btn-primary w-100 mt-4">{{ t.customer.verify.confirm }}</button>
+          <div class="as-form-error text-danger d-none small mt-2"></div>
+          <div class="as-invalid-error d-none">{{ t.customer.error.verify_code_error }}</div>
+        </form>
+        <form action="{{ settings.api_host }}/auth/verification/email/send" class="as-email-form" method="post" novalidate>
+          <input type="hidden" name="lang" value="{{ site.lang | slug }}">
+          <input type="hidden" name="email" class="as-email-param">
+          <div class="as-frequent-error d-none">{{ t.customer.error.too_many_requests }}</div>
+          <div class="as-invalid-error d-none">{{ t.customer.error.other_error }}</div>
+        </form>
+      </div>
+    </div>
+  </section> 
+</main>

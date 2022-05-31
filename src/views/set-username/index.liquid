@@ -1,0 +1,47 @@
+---
+pagination:
+  data: sites
+  size: 1
+  alias: site
+title: Set Username
+# page 是关键字，不能用
+permalink: "{{ site._meta.lang | slug }}/set-username/"
+invisible: true
+scripts: '/set-username/index.js'
+---
+
+<main>
+  <section class="container py-9">
+    <div class="container-form">
+      <div class="as-set-username" data-login="{{ site._meta.lang | slug }}/login/">
+        <h2 class="fs-3 text-center mb-0">{{ t.customer.username.username }}</h2>
+        <div class="text-center mt-3">
+          <p class="mb-0">{{ t.customer.username.subtext }}</p>
+        </div>
+        
+        <form action="{{ settings.api_host }}/auth/update" class="as-set-username-form mt-6" method="post" novalidate data-need-authorization="true" autocomplete="off">
+          <div class="form-floating form-pristine">
+            <input type="text" name="username" class="as-form-required form-control input-pristine as-username-param" id="username" placeholder="Name" minlength="3" maxlength="30" required
+              data-pristine-pattern= "/^[a-z0-9_-]+$/i"
+              data-pristine-pattern-message="{{ t.customer.error.format_error }}"
+              data-pristine-minlength-message="{{ t.customer.error.format_error }}"
+              data-pristine-maxlength-message="{{ t.customer.error.format_error }}"
+              data-pristine-required-message="{{ t.customer.error.empty_error | replace: "label", t.customer.username.name | downcase | capitalize }}">
+            <label for="username">{{ t.customer.username.name }}</label>
+          </div>
+          <input type="hidden" name="need_multipass" class="as-need-multipass-param" value="0">
+          <input type="hidden" name="return_to" class="as-return-to-param">
+          <input type="hidden" name="store" class="as-store-param">
+          <input type="hidden" name="lang" value="{{ site.lang | slug }}">
+          <div class="as-form-error text-danger d-none small mt-2"></div>
+          <div class="as-invalid-error d-none">{{ t.customer.error.other_error }}</div>
+          <div class="as-already-error d-none">{{ t.customer.error.username_taken_error }}</div>
+          <button type="submit" class="as-submit btn btn-primary w-100 mt-4">{{ t.customer.username.save }}</button>
+        </form>
+        <form action="{{ settings.api_host }}/auth/me" class="as-get-username-form" method="get" novalidate data-need-authorization="true" autocomplete="off">
+        </form>
+      </div>
+    </div>
+  </section>
+  
+</main>

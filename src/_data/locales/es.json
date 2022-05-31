@@ -1,0 +1,94 @@
+{
+  "customer":{
+    "change_information":{
+      "birthday":"Cumpleaños",
+      "country_or_region":"País o región",
+      "day":"Día",
+      "first_name":"Nombre",
+      "gender":"Género",
+      "last_name":"Apellido",
+      "month":"Mes",
+      "phone_number":"Número de teléfono",
+      "save":"Guardar",
+      "title":"Información personal",
+      "year":"Año"
+    },
+    "error":{
+      "account_not_exist_error":"La cuenta no existe.",
+      "policy_uncheck_error":"Por favor, lea y acepte nuestra política.",
+      "old_system_user_error":"Nuestro sistema ha sido actualizado, por favor haga clic en el botón \"olvidar contraseña\" para restablecer su contraseña.",
+      "reset_password_error": "In order to offer better service, we have updated our system. Please reset your password accordingly, thanks!",
+      "confirm_password_error":"La contraseña confirmada no coincide con la nueva contraseña, por favor, introdúzcala de nuevo.",
+      "email_taken_error":"El correo electrónico ya ha sido tomado.",
+      "empty_error":"Por favor, proporcione una label válida.",
+      "format_error":"Por favor, concuerde con el formato solicitado.",
+      "login_mismatch_error":"Su correo electrónico o su contraseña han sido introducidos incorrectamente.",
+      "other_error":"Algo salió mal, por favor inténtelo más tarde.",
+      "too_many_requests":"Demasiados intentos, por favor, inténtelo más tarde.",
+      "username_taken_error":"El nombre de usuario ya ha sido tomado.",
+      "verify_code_error":"Error en la verificación del código, por favor, inténtelo de nuevo."
+    },
+    "login":{
+      "create_account":"Crear una cuenta",
+      "email":"Dirección de correo electrónico",
+      "forgot_password":"Olvidé mi contraseña",
+      "login":"Inicio de sesión",
+      "password":"Contraseña",
+      "privacy_policy":"Al iniciar la sesión, usted acepta [Política de privacidad aquí]({privacy_policy_url}).",
+      "privacy_policy_html":"Política de privacidad",
+      "title":"Acceda a su cuenta"
+    },
+    "register":{
+      "email":"Dirección de correo electrónico",
+      "privacy_policy":"Estoy de acuerdo con el Acuerdo de Usuario. Consulte nuestra [Política de privacidad aquí]({privacy_policy_url}).",
+      "privacy_policy_html":"Política de privacidad aquí",
+      "sign_in":"Acceder",
+      "submit":"Crear una cuenta",
+      "title":"Crear una cuenta",
+      "user_agreement_html":"Acuerdo de usuario"
+    },
+    "reset_password":{
+      "email":"Dirección de correo electrónico",
+      "log_in":"O volver a Inicio de sesión",
+      "password_confirm":"Confirmar contraseña",
+      "submit":"Reiniciar",
+      "subtext":"Introduzca su correo electrónico para recibir instrucciones sobre cómo restablecer su contraseña.",
+      "title":"Restablecer contraseña"
+    },
+    "reset_password_submitted":{
+      "back":"Volver al inicio de sesión",
+      "subtext":"Debería recibir un enlace en unos momentos. Abra ese enlace para restablecer su contraseña.",
+      "title":"Restablecer contraseña"
+    },
+    "set_password":{
+      "confirm_password":"Confirmar contraseña",
+      "password":"Contraseña",
+      "submit":"Confirmar",
+      "subtext":"Mínimo 8 caracteres, al menos una letra mayúscula, una minúscula y un número",
+      "title":"Establezca su contraseña"
+    },
+    "update_password":{
+      "password":"Contraseña",
+      "repeat_password":"Repita la contraseña",
+      "submit":"Actualizar contraseña",
+      "subtext":"Por favor, introduzca su nueva contraseña.",
+      "title":"Actualizar contraseña"
+    },
+    "username":{
+      "name":"Nombre",
+      "save":"Guardar",
+      "subtext":"Su nombre de usuario sólo puede ser una combinación de letras, números , _ y -.",
+      "username":"Establezca su nombre de usuario"
+    },
+    "verify":{
+      "activate_information":"Active su cuenta en 24 horas",
+      "change":"Cambiar",
+      "confirm":"Confirmar",
+      "count_down":"Enviar de nuevo numbers después",
+      "send_again":"Enviar de nuevo",
+      "subtext":"Hemos enviado un código de verificación a su correo electrónico:",
+      "title":"Confirme su correo electrónico",
+      "verification_code":"Código de verificación"
+    }
+  }
+}

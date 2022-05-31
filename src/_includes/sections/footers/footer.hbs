@@ -1,0 +1,9 @@
+{{#each sites}}
+  {{#ifEquals this._meta.lang @root.locale }}
+    <footer class="site-footer w-100">
+      <div class="container py-3 text-dark">
+        <div class="mb-0">{{ this.copyright }}</div>
+      </div>
+    </footer>
+  {{/ifEquals}}
+{{/each}}

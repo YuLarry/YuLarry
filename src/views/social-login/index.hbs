@@ -1,0 +1,15 @@
+---
+title: Login
+# page 是关键字，不能用
+permalink: "/social/login/"
+invisible: true
+scripts: '/social-login/index.js'
+---
+
+<main>
+  <form action="{{ settings.api_host }}/auth/me" method="get" class="as-verify-form d-none" data-need-authorization="true" novalidate autocomplete="off">
+    <input type="hidden" name="need_multipass" class="as-need-multipass-param" value="1">
+    <input type="hidden" name="return_to" class="as-return-to-param">
+    <input type="hidden" name="store" class="as-store-param">
+  </form>
+</main>

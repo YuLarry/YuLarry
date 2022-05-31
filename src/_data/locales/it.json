@@ -1,0 +1,94 @@
+{
+  "customer":{
+    "change_information":{
+      "birthday":"Compleanno",
+      "country_or_region":"Paese o regione",
+      "day":"Giorno",
+      "first_name":"Nome",
+      "gender":"Genere",
+      "last_name":"Cognome",
+      "month":"Mese",
+      "phone_number":"Numero di telefono",
+      "save":"Salva",
+      "title":"Informazioni personali",
+      "year":"Anno"
+    },
+    "error":{
+      "account_not_exist_error":"L'account non esiste.",
+      "policy_uncheck_error":"Si prega di leggere e accettare la nostra politica.",
+      "old_system_user_error":"Il nostro sistema è stato aggiornato, clicca su \"dimentica la password\" per resettare la tua password.",
+      "reset_password_error": "In order to offer better service, we have updated our system. Please reset your password accordingly, thanks!",
+      "confirm_password_error":"La password confermata non corrisponde alla nuova password, inseriscila di nuovo.",
+      "email_taken_error":"L'email è già stata presa.",
+      "empty_error":"Si prega di fornire un label valido.",
+      "format_error":"Si prega di corrispondere al formato richiesto.",
+      "login_mismatch_error":"L'email o la password non sono state inserite correttamente.",
+      "other_error":"Qualcosa è andato storto, prova più tardi.",
+      "too_many_requests":"Troppi tentativi, prova più tardi.",
+      "username_taken_error":"Il nome utente è già stato preso.",
+      "verify_code_error":"Errore di verifica del codice, si prega di riprovare."
+    },
+    "login":{
+      "create_account":"Creare un account",
+      "email":"Indirizzo email",
+      "forgot_password":"Password dimenticata",
+      "login":"Accesso",
+      "password":"Password",
+      "privacy_policy":"Effettuando il login, accetti [Informativa sulla privacy]({privacy_policy_url}).",
+      "privacy_policy_html":"Informativa sulla privacy",
+      "title":"Accedi al tuo account"
+    },
+    "register":{
+      "email":"Indirizzo email",
+      "privacy_policy":"Accetto l'Accordo con l'Utente. Si prega di vedere la nostra [Informativa sulla privacy]({privacy_policy_url}).",
+      "privacy_policy_html":"Informativa sulla privacy qui",
+      "sign_in":"Accedi",
+      "submit":"Creare un account",
+      "title":"Creare un account",
+      "user_agreement_html":"Accordo con l'Utente"
+    },
+    "reset_password":{
+      "email":"Indirizzo email",
+      "log_in":"Oppure torna a Accedi",
+      "password_confirm":"Conferma la password",
+      "submit":"Reimposta",
+      "subtext":"Inserisci la tua email per ricevere le istruzioni su come reimpostare la tua password.",
+      "title":"Reimpostare la password"
+    },
+    "reset_password_submitted":{
+      "back":"Torna al log in",
+      "subtext":"Dovresti ricevere un link tra qualche istante. Per favore, apri quel link per reimpostare la tua password.",
+      "title":"Reimposta la password"
+    },
+    "set_password":{
+      "confirm_password":"Conferma la password",
+      "password":"Password",
+      "submit":"Confermare",
+      "subtext":"Minimo 8 caratteri, almeno una lettera maiuscola, una lettera minuscola e un numero",
+      "title":"Imposta la tua password"
+    },
+    "update_password":{
+      "password":"Password",
+      "repeat_password":"Ripeti la password",
+      "submit":"Aggiorna la password",
+      "subtext":"Inserisci la tua nuova password.",
+      "title":"Aggiorna la password"
+    },
+    "username":{
+      "name":"Nome",
+      "save":"Salva",
+      "subtext":"Il tuo nome utente può essere solo una combinazione di lettere, numeri, _ e -.",
+      "username":"Imposta il tuo nome utente"
+    },
+    "verify":{
+      "activate_information":"Attiva il tuo account entro 24 ore",
+      "change":"Cambia",
+      "confirm":"Conferma",
+      "count_down":"Invia di nuovo dopo numbers",
+      "send_again":"Invia di nuovo",
+      "subtext":"Abbiamo inviato un codice di verifica alla tua email:",
+      "title":"Conferma la tua email",
+      "verification_code":"Codice di verifica"
+    }
+  }
+}

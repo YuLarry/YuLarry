@@ -1,0 +1,13 @@
+{{#each sites}}
+  {{#ifEquals this._meta.lang @root.locale }}
+    <header class="site-top-nav">
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="{{ this.root_url }}">
+            <svg height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="m0 0h16v16h-16z" fill="#2699fb"></path><path d="m16 0h16v16h-16z" fill="#bce0fd"></path><path d="m0 16h16v16h-16z" fill="#bce0fd"></path><path d="m16 16h16v16h-16z" fill="#2699fb"></path></svg>
+          </a>
+        </div>
+      </nav>
+    </header>
+  {{/ifEquals}}
+{{/each}}

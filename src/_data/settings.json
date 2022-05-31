@@ -1,0 +1,10 @@
+{
+  "api_host": "https://fstlncls.bbxlk.cc/api",
+  "brand_name" : "Brand",
+  "favicon": "/assets/media/favicon.png",
+  "logo": "/assets/media/logo.svg",
+  "theme": {
+    "color": "#ffffff",
+    "googlefont": "https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&amp;display=swap"
+  }
+}

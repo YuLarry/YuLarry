@@ -1,0 +1,102 @@
+$icon-size: 1em !default;
+$margin-icon: .5 * $icon-size * ($input-line-height - 1);
+
+// 根据
+.icon-left,
+.icon-right,
+.icon-only,
+.btn,
+.page-link,
+.nav-link,
+.input-group-text,
+.input-group > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu), .input-group > .dropdown-toggle:nth-last-child(n + 3),
+.input-group > :not(:first-child):not(.dropdown-menu) {
+  &>svg {
+    fill: currentColor;
+    align-self: center;
+    display: block;
+    pointer-events: none;
+    width: $icon-size;
+    height: $icon-size;
+    margin-top: $margin-icon;
+    margin-bottom: $margin-icon;
+  }
+}
+
+// icon only
+.icon-only {
+  padding-left: $input-padding-y;
+  padding-right: $input-padding-y;
+
+  &>svg {
+    margin-left: $margin-icon;
+    margin-right: $margin-icon;
+  }
+
+  &.btn-lg {
+    padding-left: $input-padding-y-lg;
+    padding-right: $input-padding-y-lg;
+  }
+
+  &.btn-sm {
+    padding-left: $input-padding-y-sm;
+    padding-right: $input-padding-y-sm;
+  }
+}
+// 当文本与图表混排，视觉上不对齐时，进行微调
+.icon-calibrated {
+  &>svg {
+    transform: translate(0,-.06em);
+  }
+}
+
+// .alert-dismissible .close,
+// button.close {
+//   &>svg {
+//     width: $close-font-size;
+//     height: $close-font-size;
+//     display: block;
+//     fill: currentColor;
+//     pointer-events: none;
+//   }
+// }
+
+// icon + text，并且需要贴边的那种
+.icon-left {
+  &>svg {
+    float: left;
+    margin-right: map-get($spacers, 1);
+  }
+}
+
+.icon-right {
+  &>svg {
+    float: right;
+    margin-left: map-get($spacers, 1);
+  }
+}
+// text + icon，并且需要贴边的那种
+// .icon-right {
+//   &.btn-lg {
+//     &>svg {
+//       margin-right: add($input-line-height * .25em, $input-padding-y-lg - $input-padding-x-lg - $input-padding-y / 2);
+//     }
+//   }
+
+//   &.btn-sm {
+//     &>svg {
+//       margin-right: add($input-line-height * .25em, $input-padding-y-sm - $input-padding-x-sm - $input-padding-y / 2);
+//     }
+//   }
+
+//   &>svg {
+//     margin-left: map-get($spacers, 1 );
+//     margin-right: add($input-line-height * .25em, $input-padding-y / 2 - $input-padding-x );
+//   }
+// }
+
+.btn-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

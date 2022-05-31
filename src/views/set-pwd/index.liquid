@@ -1,0 +1,64 @@
+---
+pagination:
+  data: sites
+  size: 1
+  alias: site
+title: Set Password
+# page 是关键字，不能用
+permalink: "{{ site._meta.lang | slug }}/set-password/"
+scripts: '/set-pwd/index.js'
+---
+
+<main>
+  <section class="container py-9">
+    <div class="container-form">  
+      <div class="as-set-pwd" data-next-page="{{ site._meta.lang | slug }}/set-username/">
+        <h2 class="fs-3 text-center mb-0">{{ t.customer.set_password.title }}</h2>
+        <div class="text-center mt-3">
+          <p class="mb-0">{{ t.customer.set_password.subtext }}</p>
+        </div>
+        <form action="{{ settings.api_host }}/auth/register" class="as-set-pwd-form mt-6" method="post" novalidate autocomplete="off">
+          <div class="form-floating form-pristine as-pwd-wrap">
+            <input type="password" name="password" class="form-control input-pristine as-pwd-input" id="set-pwd"
+              data-pristine-required-message="{{ t.customer.error.empty_error | replace: "label", t.customer.set_password.password | downcase | capitalize }}"
+                data-pristine-pattern= "/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/"
+                data-pristine-pattern-message="{{ t.customer.error.format_error }}"
+              placeholder="{{ t.customer.set_password.password }}" required>
+            <div class="as-visible-control visible-control content-invisible">
+              <div class="icon-eye-off">
+                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g opacity=".297"><path d="m0 0h24v24h-24z" fill="none"/><g fill="#161317"><path d="m32.75 16.55c-1.05-1.3-4.95-5.55-10.65-5.55a11.7 11.7 0 0 0 -1.9.15l1.8 1.85h.1c4.4 0 7.65 3.1 8.85 4.5a16.85 16.85 0 0 1 -2.3 2.15l1.4 1.4a15.05 15.05 0 0 0 2.7-2.6 1.5 1.5 0 0 0 0-1.9z" transform="translate(-10.1 -5.5)"/><path d="m15.711 16.55a2.9 2.9 0 0 0 .3-1.3 3 3 0 0 0 -3-3 2.9 2.9 0 0 0 -1.3.3l-5.85-5.85a1 1 0 0 0 -1.4 1.4l2.35 2.4a16.05 16.05 0 0 0 -4.45 3.8 1.5 1.5 0 0 0 0 1.9c1.05 1.3 4.95 5.55 10.65 5.55a11.5 11.5 0 0 0 4.25-.8l2.9 2.85a1 1 0 1 0 1.4-1.4zm-2.7 3.2c-4.4 0-7.65-3.1-8.85-4.5a14.85 14.85 0 0 1 4.15-3.3l2 2a2.9 2.9 0 0 0 -.3 1.3 3 3 0 0 0 3 3 2.9 2.9 0 0 0 1.3-.3l1.4 1.4a9.55 9.55 0 0 1 -2.7.4z" transform="translate(-1.011 -3.25)"/></g></g></svg>
+              </div>
+              <div class="icon-eye">
+                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g opacity=".3"><path d="m0 0h24v24h-24z" fill="none"/><g fill="#161317"><path d="m23.781 16.581c-1.056-1.307-4.981-5.581-10.709-5.581s-9.653 4.274-10.709 5.581a1.508 1.508 0 0 0 0 1.911c1.056 1.308 4.977 5.58 10.709 5.58s9.653-4.274 10.709-5.581a1.508 1.508 0 0 0 0-1.91zm-10.709 5.48c-4.424 0-7.692-3.117-8.9-4.525 1.207-1.408 4.475-4.525 8.9-4.525s7.692 3.117 8.9 4.525c-1.208 1.408-4.472 4.525-8.9 4.525z" transform="translate(-1.072 -5.536)"/><circle cx="12" cy="12" r="3"/></g></g></svg>
+              </div>
+            </div>
+            <label for="set-pwd">{{ t.customer.set_password.password }}</label>
+          </div>
+          <div class="form-floating mt-3 form-pristine as-pwd-wrap">
+            <input type="password" class="form-control input-pristine as-pwd-input" id="confirm-pwd" placeholder="{{ t.customer.set_password.confirm_password }}" required
+              data-pristine-equals="#set-pwd" data-pristine-required-message="{{ t.customer.error.empty_error | replace: "label", t.customer.set_password.confirm_password | downcase | capitalize }}" data-pristine-equals-message="{{ t.customer.error.confirm_password_error }}">
+            <div class="as-visible-control visible-control content-invisible">
+              <div class="icon-eye-off">
+                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g opacity=".297"><path d="m0 0h24v24h-24z" fill="none"/><g fill="#161317"><path d="m32.75 16.55c-1.05-1.3-4.95-5.55-10.65-5.55a11.7 11.7 0 0 0 -1.9.15l1.8 1.85h.1c4.4 0 7.65 3.1 8.85 4.5a16.85 16.85 0 0 1 -2.3 2.15l1.4 1.4a15.05 15.05 0 0 0 2.7-2.6 1.5 1.5 0 0 0 0-1.9z" transform="translate(-10.1 -5.5)"/><path d="m15.711 16.55a2.9 2.9 0 0 0 .3-1.3 3 3 0 0 0 -3-3 2.9 2.9 0 0 0 -1.3.3l-5.85-5.85a1 1 0 0 0 -1.4 1.4l2.35 2.4a16.05 16.05 0 0 0 -4.45 3.8 1.5 1.5 0 0 0 0 1.9c1.05 1.3 4.95 5.55 10.65 5.55a11.5 11.5 0 0 0 4.25-.8l2.9 2.85a1 1 0 1 0 1.4-1.4zm-2.7 3.2c-4.4 0-7.65-3.1-8.85-4.5a14.85 14.85 0 0 1 4.15-3.3l2 2a2.9 2.9 0 0 0 -.3 1.3 3 3 0 0 0 3 3 2.9 2.9 0 0 0 1.3-.3l1.4 1.4a9.55 9.55 0 0 1 -2.7.4z" transform="translate(-1.011 -3.25)"/></g></g></svg>
+              </div>
+              <div class="icon-eye">
+                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g opacity=".3"><path d="m0 0h24v24h-24z" fill="none"/><g fill="#161317"><path d="m23.781 16.581c-1.056-1.307-4.981-5.581-10.709-5.581s-9.653 4.274-10.709 5.581a1.508 1.508 0 0 0 0 1.911c1.056 1.308 4.977 5.58 10.709 5.58s9.653-4.274 10.709-5.581a1.508 1.508 0 0 0 0-1.91zm-10.709 5.48c-4.424 0-7.692-3.117-8.9-4.525 1.207-1.408 4.475-4.525 8.9-4.525s7.692 3.117 8.9 4.525c-1.208 1.408-4.472 4.525-8.9 4.525z" transform="translate(-1.072 -5.536)"/><circle cx="12" cy="12" r="3"/></g></g></svg>
+              </div>
+            </div>
+            <label for="confirm-pwd">{{ t.customer.set_password.confirm_password }}</label>
+          </div>
+          <input type="hidden" class="as-email-param" name="email">
+          <input type="hidden" class="as-source-param" name="source">
+          <input type="hidden" class="as-return-to-param" name="return_to">
+          <input type="hidden" class="as-store-param" name="store">
+          <input type="hidden" name="lang" value="{{ site.lang | slug }}">
+          <div class="as-form-error text-danger d-none small mt-2"></div>
+          <div class="as-format-error d-none">{{ t.customer.error.format_error }}</div>
+          <div class="as-other-error d-none">{{ t.customer.error.other_error }}</div>
+          <button type="submit" class="as-submit btn btn-primary w-100 mt-4">{{ t.customer.set_password.submit }}</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+</main>

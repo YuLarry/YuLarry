@@ -1,0 +1,94 @@
+{
+  "customer":{
+    "change_information":{
+      "birthday":"Geburtstag",
+      "country_or_region":"Land oder Region",
+      "day":"Tag",
+      "first_name":"Vorname",
+      "gender":"Geschlecht",
+      "last_name":"Nachname",
+      "month":"Monat",
+      "phone_number":"Rufnummer",
+      "save":"Speichern",
+      "title":"Persönliche Informationen",
+      "year":"Jahr"
+    },
+    "error":{
+      "account_not_exist_error":"Das Konto existiert nicht.",
+      "policy_uncheck_error":"Bitte lesen und akzeptieren Sie unsere Richtlinie.",
+      "old_system_user_error":"Unser System wurde aktualisiert, bitte klicken Sie auf die Schaltfläche \"Passwort vergessen\", um Ihr Passwort zurückzusetzen.",
+      "reset_password_error": "In order to offer better service, we have updated our system. Please reset your password accordingly, thanks!",
+      "confirm_password_error":"Bestätigtes Passwort stimmt nicht mit dem neuen Passwort überein, bitte erneut eingeben.",
+      "email_taken_error":"Die E-Mail ist bereits vergeben.",
+      "empty_error":"Bitte geben Sie eine gültige label an.",
+      "format_error":"Bitte passen Sie das gewünschte Format an.",
+      "login_mismatch_error":"Ihre E-Mail oder Ihr Passwort wurde falsch eingegeben.",
+      "other_error":"Irgendetwas ist schief gelaufen, bitte versuchen Sie es später.",
+      "too_many_requests":"Zu viele Versuche, bitte versuchen Sie es später.",
+      "username_taken_error":"Der Nutzername ist bereits vergeben.",
+      "verify_code_error":"Verify Code Fehler, bitte versuchen Sie es erneut."
+    },
+    "login":{
+      "create_account":"Konto erstellen",
+      "email":"E-Mail addresse",
+      "forgot_password":"Passwort vergessen",
+      "login":"Anmeldung",
+      "password":"Passwort",
+      "privacy_policy":"Mit der Anmeldung erklären Sie sich mit [Datenschutzbestimmungen hier]({privacy_policy_url}).",
+      "privacy_policy_html":"Datenschutzrichtlinie",
+      "title":"Anmelden bei Ihrem Konto"
+    },
+    "register":{
+      "email":"E-Mail addresse",
+      "privacy_policy":"Ich stimme der Nutzungsvereinbarung zu. Bitte beachten Sie unsere [Datenschutzbestimmungen hier]({privacy_policy_url}).",
+      "privacy_policy_html":"Datenschutzbestimmungen hier",
+      "sign_in":"Anmelden",
+      "submit":"Konto erstellen",
+      "title":"Konto erstellen",
+      "user_agreement_html":"Benutzervereinbarung"
+    },
+    "reset_password":{
+      "email":"E-Mail addresse",
+      "log_in":"Oder zurück zu Anmelden",
+      "password_confirm":"Bestätigen Sie das Passwort",
+      "submit":"Zurücksetzen",
+      "subtext":"Geben Sie Ihre E-Mail-addresse ein, um Anweisungen zum Zurücksetzen Ihres Passworts zu erhalten.",
+      "title":"Passwort zurücksetzen"
+    },
+    "reset_password_submitted":{
+      "back":"Zurück zur Anmeldung",
+      "subtext":"Sie sollten in wenigen Augenblicken einen Link erhalten. Bitte öffnen Sie diesen Link, um Ihr Passwort zurückzusetzen.",
+      "title":"Passwort zurücksetzen"
+    },
+    "set_password":{
+      "confirm_password":"Bestätigen Sie das Passwort",
+      "password":"Passwort",
+      "submit":"Bestätigen Sie",
+      "subtext":"Mindestens 8 Zeichen, mindestens ein Großbuchstabe, ein Kleinbuchstabe und eine Zahl",
+      "title":"Ihr Passwort festlegen"
+    },
+    "update_password":{
+      "password":"Passwort",
+      "repeat_password":"Passwort wiederholen",
+      "submit":"Passwort aktualisieren",
+      "subtext":"Bitte geben Sie Ihr neues Passwort ein.",
+      "title":"Passwort aktualisieren"
+    },
+    "username":{
+      "name":"Name",
+      "save":"Speichern",
+      "subtext":"Ihr Benutzername kann nur aus einer Kombination von Buchstaben, Zahlen , _ und - bestehen.",
+      "username":"Einstellen des Benutzernamens"
+    },
+    "verify":{
+      "activate_information":"Bitte aktivieren Sie Ihr Konto innerhalb von 24 Stunden",
+      "change":"Ändern",
+      "confirm":"Bestätigen Sie",
+      "count_down":"Erneut senden numbers später",
+      "send_again":"Erneut senden",
+      "subtext":"Wir haben einen Verifizierungscode an Ihre E-Mail gesendet:",
+      "title":"Bestätigen Sie Ihre E-Mail",
+      "verification_code":"Verifizierungscode"
+    }
+  }
+}

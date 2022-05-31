@@ -1,0 +1,310 @@
+$header-h: 64px;
+$header-h-xl: 54px;
+$search-icon-width: 46px;
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.site-header{
+  .container{
+    @include media-breakpoint-down(md) {
+      max-width: 100%;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    // padding-right: calc(#{$grid-gutter-width-sm} - #{$navbar-toggler-padding-x});
+    .navbar-toggler {
+      // 菜单toggler
+      &:not(.collapsed) {
+        .hamburger-box:nth-child(1) {
+          transform: translateY(6px);
+          &::before {
+            transform: rotate(45deg);
+          }
+        }
+        .hamburger-box:nth-child(2) {
+          opacity: 0;
+        }
+        .hamburger-box:nth-child(3) {
+          transform: translateY(-6px);
+          &::before {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+      .hamburger-box {
+        display: block;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        transition: all .25s ease;
+        &::before {
+          content: '';
+          display: block;
+          border-top: 2px solid;
+          width: 20px;
+          transition: transform .25s ease .2s;
+        }
+      }
+      
+    }
+  }
+  height: $header-h;
+  z-index: $zindex-fixed - 1;
+  position: relative;
+  @include media-breakpoint-down(xl) {
+      height: $header-h-xl;
+      .container{
+        padding: 0;
+      }
+  }
+  .logo-text{
+    font-size: .75rem;
+  }
+  .nav-menu{
+      display: flex;
+      // height: $header-h;
+      transition: height 0.3s ease;
+      will-change: height;
+      @include media-breakpoint-down(xl) {
+          // display: none;
+          overflow: hidden;
+          // overflow-y: scroll;
+          height: 0;
+          display: flex;
+          z-index: 1000;
+          background: $white;
+      }
+  }
+  
+  &[data-expand="true"] {
+      .nav-icon-sm{
+          display: flex;
+      }
+  }
+  &[data-expand="false"] {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      overflow-y: scroll;
+      background: $white;
+      
+      .ico-expanded{
+          // @include ico(close);
+      }
+      .nav-menu{
+          @include media-breakpoint-down(xl) {
+              height: calc(100vh - #{$header-h-xl});
+              overflow-y: scroll;
+              padding: px2rem(12px) 0;
+          }
+      }
+      .nav-icon-sm{
+          display: none;
+      }
+      .hamburger-box:nth-child(1) {
+        transform: translateY(6px);
+        &::before {
+          transform: rotate(45deg);
+        }
+      }
+      .hamburger-box:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger-box:nth-child(3) {
+        transform: translateY(-6px);
+        &::before {
+          transform: rotate(-45deg);
+        }
+      }
+  }
+  .nav-expand{
+      left: 1rem;
+  }
+  .nav-icon-sm{
+      right: 1rem;
+  }
+  .nav-xl-logo{
+      font-size: 12px;
+      height: $header-h-xl;
+  }
+  
+  .nav-link{
+    line-height: px2rem(40px);
+    @include media-breakpoint-down(xl) {
+    line-height: px2rem(28px);
+    }
+    &:focus, &:active{
+    outline: none;
+    }
+  }
+  .cart-items-count {
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+      &.show {
+          background-color: $primary;
+      }
+  }
+  .dropdown-item{
+      line-height: px2rem(32px);
+      &:hover{
+          color: $primary;
+          background: $white;
+      }
+      @include media-breakpoint-down(xl) {
+          padding: .5rem 1rem;
+          line-height: px2rem(28px);
+      }
+  }
+  .dropdown-menu-center{
+      left: auto;
+      @include media-breakpoint-up(xl) {
+          margin-top: -10px;
+      }
+      @include media-breakpoint-down(xl) {
+          display: flex;
+          position: relative;
+          top: 0;
+          background: transparent;
+          padding-top: 0;
+          padding-bottom: 0;
+          margin-top: 0;
+          box-shadow: none !important;
+          &.dropdown-menu-user{
+              font-size: px2rem(12px);
+              // letter-spacing: 3px;
+              .dropdown-item{
+                  line-height: px2rem(20px);
+              }
+          }
+      }
+  }
+  .dropdown{
+      &:hover{
+          .dropdown-menu-center{
+              display: flex;    
+          } 
+      }
+  }
+  .dropdown-menu{
+      width: px2rem(280px);
+      .dropdown-item{
+          white-space: normal;
+      }
+  }
+  .nav-searchview{
+      .searchview-container{
+          width: 693px;
+          max-width: 693px;
+          height: 100%;
+          pointer-events: none;
+          @include media-breakpoint-down(xl) {
+              width: 100%;
+              max-width: 100%;
+          }
+      }
+      .searchview-bar{
+          @include media-breakpoint-down(xl) {
+              height: 100%;
+          }
+      }
+      .nav-searchresults{
+          // padding-right: 0 !important;
+          @include media-breakpoint-down(xl) {
+              box-shadow: none !important;
+          }
+          .headline{
+              padding-top: px2rem(24px);
+              color: rgba(0, 0, 0, .25);
+              // letter-spacing: .67px;
+              @include media-breakpoint-down(xl) {
+                  padding-top: px2rem(12px);
+              }
+
+          }
+          .result-list{
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+          }
+      }
+      .searchview-bar-wrapper{
+          height: $header-h;
+          @include media-breakpoint-down(xl) {
+              height: $header-h-xl;
+          }
+      }
+      .searchform, .searchform-input{
+          height: 20px;
+          line-height: 20px;
+          font-size: px2rem(14px);
+          @include media-breakpoint-down(xl) {
+              height: $header-h-xl;
+              line-height: $header-h-xl;
+          }
+          &:focus, &:active{
+              outline: 0;
+          }
+      }
+      .searchform-input{
+          width: 100%;
+          padding: 0 $search-icon-width;
+      }
+      .searchview-submit{
+          left: 0;
+          height: $header-h;
+          width: $search-icon-width;
+          top: 0;
+          @include media-breakpoint-down(xl) {
+              height: $header-h-xl;
+          }
+          &:focus, &:active{
+              outline: 0;
+          }
+      }
+      .searchview-close{
+          height: $header-h;
+          width: $search-icon-width;
+          @include media-breakpoint-down(xl) {
+              height: $header-h-xl;
+          }
+          top: 0;
+          right: 0;
+          &:focus, &:active{
+              outline: 0;
+          }
+      }
+      .dropdown-item{
+          // letter-spacing: .67px;
+          color: rgba(0, 0, 0, .45);
+          b{
+              color: rgba(0, 0, 0, .85);
+          }
+      }
+  }
+  &.searchopen{
+      .nav-menu{
+          // visibility: hidden;
+          opacity: 0;
+      }
+  }
+  .country-name{
+      // letter-spacing: 0px;
+      font-size: px2rem(14px);
+      @include media-breakpoint-down(xl) {
+          font-size: px2rem(16px);
+          // letter-spacing: 2px;
+      }
+  }
+  .navbar-toggler:focus{
+    box-shadow: none;
+  }
+  .cart-count{
+    
+  }
+}

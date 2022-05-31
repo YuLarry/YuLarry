@@ -1,0 +1,70 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../styles/variables";
+@import "../../styles/utilities";
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../styles/helpers";
+@import "../../styles/misc";
+@import "../../styles/appendix";
+
+// @import "sections/header/with-mega-dropdown";
+// @import "sections/sidebar/cart";
+// @import "sections/announcement/redirect-store/redirect-store";
+
+@import "../../styles/header";
+@import "../../styles/footer";
+@import "../../styles/404";
+@import "../../styles/article";
+@import "../../styles/policy";
+@import "../../styles/challenge";
+@import "../../styles/loading";
+
+.message-toast {
+  position: fixed;
+  left: 0 - $grid-gutter-width;
+  bottom: $grid-gutter-width;
+  z-index: $zindex-tooltip;
+  width: 100%;
+  transform: translate(-100%, 0);
+  transition: .3s;
+
+  &.show {
+    display: block;
+    left: $grid-gutter-width;
+    transform: translate(0, 0);
+  }
+}
+
+._form-control-number {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  &[type=number] {
+    -moz-appearance:textfield;
+  }
+
+  min-width: 3rem;
+}
+
+._site-progress-bar {
+  z-index: $zindex-modal + 1;
+  .progress-bar {
+    width: 0% !important;
+  }
+
+  .progress.show {
+    .progress-bar {
+      width: 100% !important;
+    }
+  }
+}
+
+._discount-allocation {
+  & + ._discount-allocation {
+    margin-top: 0 !important;
+  }
+}

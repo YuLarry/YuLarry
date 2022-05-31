@@ -1,0 +1,94 @@
+{
+  "customer":{
+    "change_information":{
+      "birthday":"Anniversaire",
+      "country_or_region":"Pays ou région",
+      "day":"Jour",
+      "first_name":"Prénom",
+      "gender":"Genre",
+      "last_name":"Nom de famille",
+      "month":"Mois",
+      "phone_number":"Numéro de téléphone",
+      "save":"Sauvgardez",
+      "title":"Information personnelle",
+      "year":"Année"
+    },
+    "error":{
+      "account_not_exist_error":"Le compte n'existe pas.",
+      "policy_uncheck_error":"Veuillez lire et accepter notre politique.",
+      "old_system_user_error":"Notre système a été mis à jour, veuillez cliquer sur le bouton \"Mot de passe oublié\" pour réinitialiser votre mot de passe.",
+      "reset_password_error": "In order to offer better service, we have updated our system. Please reset your password accordingly, thanks!",
+      "confirm_password_error":"Le mot de passe confirmé ne correspond pas au nouveau mot de passe, veuillez entrer à nouveau.",
+      "email_taken_error":"L'email a déjà été pris.",
+      "empty_error":"Veuillez fournir une label valide.",
+      "format_error":"Veuillez respecter le format demandé.",
+      "login_mismatch_error":"Votre addresse électronique ou votre mot de passe a été saisi de manière incorrecte.",
+      "other_error":"Un problème est survenu, veuillez réessayer plus tard.",
+      "too_many_requests":"Trop de tentatives, veuillez essayer plus tard.",
+      "username_taken_error":"Le nom d'utilisateur a déjà été pris.",
+      "verify_code_error":"Code de vérification incorrecte, veuillez réessayer."
+    },
+    "login":{
+      "create_account":"Créer un compte",
+      "email":"addresse électronique",
+      "forgot_password":"Mot de passe oublié",
+      "login":"Connexion",
+      "password":"Mot de passe",
+      "privacy_policy":"En vous connectant, vous acceptez de respecter [Politique de confidentialité]({privacy_policy_url}).",
+      "privacy_policy_html":"Politique de confidentialité",
+      "title":"Connectez-vous à votre compte"
+    },
+    "register":{
+      "email":"addresse électronique",
+      "privacy_policy":"J'accepte l'accord de l'utilisateur. Veuillez consulter notre [Politique de confidentialité]({privacy_policy_url}).",
+      "privacy_policy_html":"Politique de confidentialité ici",
+      "sign_in":"Se connecter",
+      "submit":"Créer un compte",
+      "title":"Créer un compte",
+      "user_agreement_html":"Accord de l'utilisateur"
+    },
+    "reset_password":{
+      "email":"addresse électronique",
+      "log_in":"Ou retournez à Connexion",
+      "password_confirm":"Confirmer le mot de passe",
+      "submit":"Réinitialiser",
+      "subtext":"Saisissez votre addresse électronique pour recevoir des instructions sur la façon de réinitialiser votre mot de passe.",
+      "title":"Réinitialiser le mot de passe"
+    },
+    "reset_password_submitted":{
+      "back":"Retour à la page d'accueil",
+      "subtext":"Vous devriez recevoir un lien dans quelques instants. Veuillez ouvrir ce lien pour réinitialiser votre mot de passe.",
+      "title":"Réinitialiser le mot de passe"
+    },
+    "set_password":{
+      "confirm_password":"Confirmer le mot de passe",
+      "password":"Mot de passe",
+      "submit":"Confirmer",
+      "subtext":"Minimum 8 caractères, au moins une lettre majuscule, une lettre minuscule et un chiffre.",
+      "title":"Définissez votre mot de passe"
+    },
+    "update_password":{
+      "password":"Mot de passe",
+      "repeat_password":"Répéter le mot de passe",
+      "submit":"Mise à jour du mot de passe",
+      "subtext":"Veuillez entrer votre nouveau mot de passe.",
+      "title":"Mettre à jour le mot de passe"
+    },
+    "username":{
+      "name":"Nom",
+      "save":"Sauvez",
+      "subtext":"Votre nom d'utilisateur ne peut être qu'une combinaison de lettres, de chiffres, de _ et de -.",
+      "username":"Définissez votre nom d'utilisateur"
+    },
+    "verify":{
+      "activate_information":"Veuillez activer votre compte dans les 24 heures",
+      "change":"Changement",
+      "confirm":"Confirmer",
+      "count_down":"Envoyer à nouveau numbers plus tard",
+      "send_again":"Envoyer à nouveau",
+      "subtext":"Nous avons envoyé un code de vérification à votre addresse électronique :",
+      "title":"Confirmez votre e-mail",
+      "verification_code":"Code de vérification"
+    }
+  }
+}

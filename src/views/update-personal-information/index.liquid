@@ -1,0 +1,105 @@
+---
+pagination:
+  data: sites
+  size: 1
+  alias: site
+title: Update user information
+# page 是关键字，不能用
+permalink: "{{ site._meta.lang | slug }}/update-personal-information/"
+invisible: true
+scripts: '/update-personal-information/index.js'
+---
+
+<main>
+  <section class="as-update-info container py-9" data-login="{{ site._meta.lang | slug }}/login/">
+    <div class="container-form">
+      <div class="as-set-username">
+        <h2 class="fs-3 text-center mb-0">{{ t.customer.change_information.title }}</h2> 
+        <form action="{{ settings.api_host }}/auth/update" class="as-submit-personal-info-form mt-6" method="post" novalidate data-need-authorization="true" autocomplete="off">
+          <div class="form-floating form-pristine mb-3">
+            <input type="text" name="first_name" data-name="first_name" class="as-first-name form-control input-pristine" id="first-name" placeholder="First name" maxlength="32"
+            data-pristine-maxlength-message="{{ t.customer.error.format_error }}">
+            <label for="username">{{ t.customer.change_information.first_name }}</label>
+          </div>
+          <div class="form-floating form-pristine mb-3">
+            <input type="text" name="last_name" data-name="last_name" class="as-last-name form-control input-pristine" id="last-name" placeholder="Last name" maxlength="32"
+            data-pristine-maxlength-message="{{ t.customer.error.format_error }}">
+            <label for="last-name">{{ t.customer.change_information.last_name }}</label>
+          </div>
+          <fieldset class="mb-3">
+            <legend class="fs-6">{{ t.customer.change_information.gender }}</legend>
+            <div class="form-check form-check-inline">
+              <input class="as-gender-male form-check-input" type="radio" name="profile[gender]" data-name="gender" id="gender-male" value="male">
+              <label class="form-check-label" for="gender-male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="as-gender-female form-check-input" type="radio" name="profile[gender]" data-name="gender" id="gender-female" value="female">
+              <label class="form-check-label" for="gender-female">Female</label>
+            </div>   
+          </fieldset>
+          <div class="form-floating mb-3">
+            <select id="region" type="select-one" class="as-country form-select" name="profile[country]" data-name="country" aria-label="Default select example">
+              <option selected value="gl">Global</option>
+              {% for country in countries %}
+                <option value="{{ country.code }}">{{ country.name }}</option>
+              {% endfor %}
+            </select>
+            <label for="region" class="form-label">{{ t.customer.change_information.country_or_region }}</label>
+          </div>
+          <div class="form-floating form-pristine mb-3">
+            <input type="email" name="email" data-name="email" class="as-email form-control input-pristine" id="email" placeholder="Email">
+            <label for="email">Email</label>
+          </div>
+          <div class="form-floating form-pristine mb-3">
+            <input type="text" name="profile[phone]" data-name="phone" class="as-phone-number form-control input-pristine" id="phone-number" placeholder="Phone NUmber">
+            <label for="email">{{ t.customer.change_information.phone_number }}</label>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">{{ t.customer.change_information.birthday }}</label>
+            <div class="row gx-2">
+              <div class="col-4">
+                <div class="form-floating">
+                  <select id="year" class="as-birth as-year form-select" type="select-one" aria-label="Default select example">
+                    {% assign currentYear = 'now' | date: "%Y" %}
+                    {% for year in (1900..currentYear) reversed %}
+                      <option {% if forloop.first %}selected{% endif %} value="{{ year }}">{{ year }}</option>
+                    {% endfor %} 
+                  </select>
+                  <label for="year">{{ t.customer.change_information.year }}</label>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-floating">
+                  <select id="month" class="as-birth as-month form-select" type="select-one" aria-label="Default select example">
+                    {% for month in (1..12) %}
+                      <option {% if forloop.first %}selected{% endif %} value="{% if month < 10 %}{{ month | prepend: '0' }}{% else %}{{ month }}{% endif %}">{% if month < 10 %}{{ month | prepend: '0' }}{% else %}{{ month }}{% endif %}</option>
+                    {% endfor %}
+                  </select>
+                  <label for="month">{{ t.customer.change_information.month }}</label>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-floating">
+                  <select id="day" class="as-birth as-day form-select" type="select-one" aria-label="Default select example">
+                    {% for day in (1..31) %}
+                      <option {% if forloop.first %}selected{% endif %} value="{% if day < 10 %}{{ day | prepend: '0' }}{% else %}{{ day }}{% endif %}">{% if day < 10 %}{{ day | prepend: '0' }}{% else %}{{ day }}{% endif %}</option>
+                    {% endfor %}
+                  </select>
+                  <label for="day">{{ t.customer.change_information.day }}</label>
+                <div>
+              </div>
+            </div>
+            <input class="as-birthday" type="hidden" name="profile[birthday]" data-name="birthday" value=""></input>
+          </div>
+          <input type="hidden" name="need_multipass" class="as-need-multipass-param" value="0">
+          <input type="hidden" name="lang" value="{{ site.lang | slug }}">
+          <div class="as-form-error text-danger d-none small mt-2"></div>
+          <div class="as-invalid-error d-none">{{ t.customer.error.other_error }}</div>
+          <button type="submit" class="as-submit btn btn-primary w-100 mt-4">{{ t.customer.change_information.save }}</button>
+        </form>
+        <form action="{{ settings.api_host }}/auth/me" class="as-get-personal-info-form" method="get" novalidate data-need-authorization="true" autocomplete="off">
+        </form>
+      </div>
+    </div>
+  </section>
+</main>

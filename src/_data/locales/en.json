@@ -1,0 +1,93 @@
+{
+  "customer":{
+    "change_information":{
+      "birthday":"Birthday",
+      "country_or_region":"Country Or Region",
+      "day":"Day",
+      "first_name":"First Name",
+      "gender":"Gender",
+      "last_name":"Last Name",
+      "month":"Month",
+      "phone_number":"Phone Number",
+      "save":"Save",
+      "title":"Personal Information",
+      "year":"Year"
+    },
+    "error":{
+      "account_not_exist_error":"The account does not exist.",
+      "policy_uncheck_error":"Please read and agree to our policy.",
+      "old_system_user_error":"Our system has been upgraded, please click forget password button to reset your password.",
+      "confirm_password_error":"Confirmed password does not match the new password, please enter again.",
+      "email_taken_error":"The email has already been taken.",
+      "empty_error":"Please provide a valid label.",
+      "format_error":"Please match the requested format.",
+      "login_mismatch_error":"Your email or password was entered incorrectly.",
+      "other_error":"Somthing went wrong, please try later.",
+      "too_many_requests":"Too Many Attempts, please try later.",
+      "username_taken_error":"The username has already been taken.",
+      "verify_code_error":"Verify Code error, please try again."
+    },
+    "login":{
+      "create_account":"Create Account",
+      "email":"Email address",
+      "forgot_password":"Forgot password",
+      "login":"Login",
+      "password":"Password",
+      "privacy_policy":"By logging in, you agree to [Privacy Policy]({privacy_policy_url}).",
+      "privacy_policy_html":"Privacy Policy",
+      "title":"Log in to Your Account"
+    },
+    "register":{
+      "email":"Email address",
+      "privacy_policy":"I agree to User Agreement. Please see Our [Privacy Policy]({privacy_policy_url}).",
+      "privacy_policy_html":"Privacy Policy here",
+      "sign_in":"Sign in",
+      "submit":"Create Account",
+      "title":"Create Account",
+      "user_agreement_html":"User Agreement"
+    },
+    "reset_password":{
+      "email":"Email address",
+      "log_in":"Or return to Log in",
+      "password_confirm":"Confirm Password",
+      "submit":"Reset",
+      "subtext":"Enter your email to receive instructions on how to reset your password.",
+      "title":"Reset Password"
+    },
+    "reset_password_submitted":{
+      "back":"Back to log in",
+      "subtext":"You should receive a link in a few moments. Please open that link to reset your password.",
+      "title":"Reset Password"
+    },
+    "set_password":{
+      "confirm_password":"Confirm Password",
+      "password":"Password",
+      "submit":"Confirm",
+      "subtext":"Minimum 8 characters, at least one uppercase letter, one lowercase letter and one number",
+      "title":"Set Your Password"
+    },
+    "update_password":{
+      "password":"Password",
+      "repeat_password":"Repeat Password",
+      "submit":"Update password",
+      "subtext":"Please enter your new password.",
+      "title":"Update Password"
+    },
+    "username":{
+      "name":"Name",
+      "save":"Save",
+      "subtext":"Your username can only be a combination of letters, numbers , _ and -",
+      "username":"Set your Username"
+    },
+    "verify":{
+      "activate_information":"Please activate your account within 24 hours",
+      "change":"Change",
+      "confirm":"Confirm",
+      "count_down":"Send again numbers later",
+      "send_again":"Send again",
+      "subtext":"We have sent a verification code to your Email:",
+      "title":"Confirm your email",
+      "verification_code":"Verification code"
+    }
+  }
+}
